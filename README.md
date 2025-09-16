@@ -5,6 +5,7 @@
 **Equipe:**
 * Amanda Alves Eloi - 2326260
 * Esther de Souza Ramalho - 2313582
+* Marcos Aurélio Sousa de Carvalho - 2418803
 * Maycon Barroso Andrade - 2323820
 
 ---
