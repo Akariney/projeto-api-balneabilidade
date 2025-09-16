@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "c284eebe-089c-4245-92bd-9685e388a6e1",
+		"name": "API Balneabilidade",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48474798",
+		"_collection_link": "https://acariney-6542562.postman.co/workspace/Amanda's-Workspace~8eb7472e-57be-4066-8018-de2cd6812d6c/collection/48474798-c284eebe-089c-4245-92bd-9685e388a6e1?action=share&source=collection_link&creator=48474798"
+	},
+	"item": [
+		{
+			"name": "Listar Todas as Praias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/praias",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"praias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Praia por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/praias/13",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"praias",
+						"13"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
