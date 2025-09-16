@@ -24,7 +24,11 @@ Nossa API, desenvolvida em Python com FastAPI, oferece dois endpoints principais
 
 A arquitetura da solução foi baseada na integração entre nossa API REST (sistema principal) e um arquivo de dados externo (boletim em PDF). A documentação detalhada da arquitetura e o diagrama de fluxo podem ser encontrados no arquivo: **[./docs/architecture.md](./docs/architecture.md)**.
 
-## 4. Instruções para Execução
+## 4. Relação com o ODS 11 (Cidades e Comunidades Sustentáveis)
+
+Este projeto se conecta diretamente ao Objetivo de Desenvolvimento Sustentável 11 da ONU. Ao transformar dados técnicos de um boletim em uma API aberta e acessível, contribuímos para tornar a cidade de Fortaleza mais **segura**, protegendo a saúde pública de banhistas com informações claras sobre a qualidade da água. Além disso, a iniciativa apoia a **sustentabilidade** da cidade ao promover a monitoria e a transparência sobre a condição de seus ecossistemas costeiros.
+
+## 5. Instruções para Execução
 
 Para executar e testar o projeto, siga os passos abaixo.
 
