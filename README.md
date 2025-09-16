@@ -1,43 +1,62 @@
 # Projeto de API para Balneabilidade das Praias de Fortaleza
 
 **Disciplina:** Técnicas de Integração de Sistemas (N703)
-**Professor:** [Nome do Professor]
+
 **Equipe:**
-* [Nome Completo do Integrante 1] - [Matrícula]
-* [Nome Completo do Integrante 2] - [Matrícula]
-* [Nome Completo do Integrante 3] - [Matrícula]
-* [E assim por diante...]
+* Amanda Alves Eloi - 2326260
+* Esther de Souza Ramalho - 2313582
+* Maycon Barroso Andrade - 2323820
 
 ---
 
 ## 1. Objetivo do Trabalho
 
-[Descreva aqui, com suas palavras, o objetivo principal do projeto. Por exemplo: "Desenvolver uma API RESTful para fornecer dados sobre a balneabilidade das praias de Fortaleza, integrando uma fonte de dados simulada para demonstrar os conceitos de integração de sistemas..."]
+Este projeto teve como objetivo o desenvolvimento de uma API RESTful para consulta de dados sobre a balneabilidade das praias de Fortaleza. A solução demonstra a aplicação prática dos conceitos de integração de sistemas, extraindo e processando dados de um boletim oficial da SEMACE em formato PDF para disponibilizá-los de forma programática via JSON.
 
 ## 2. Descrição Funcional da Solução
 
-[Explique aqui o que a sua API faz. Quais são as funcionalidades? Por exemplo: "A API permite que sistemas clientes consultem a lista de todas as praias monitoradas e também busquem o status de balneabilidade (própria ou imprópria) de uma praia específica através de seu identificador único..."]
+Nossa API, desenvolvida em Python com FastAPI, oferece dois endpoints principais:
+
+* `GET /praias`: Retorna a lista completa de todos os pontos de monitoramento, contendo ID, nome do local e o status de balneabilidade (Própria ou Imprópria).
+* `GET /praias/{id}`: Permite a consulta de um ponto de monitoramento específico. O endpoint retorna os dados da praia correspondente ou um erro `404 Not Found` caso o ID não seja encontrado, conforme as boas práticas de tratamento de erros.
 
 ## 3. Arquitetura da API
 
-[Nesta seção, você vai colocar o link para o arquivo `architecture.md` e, se quiser, uma breve descrição da arquitetura. Por exemplo: "A arquitetura detalhada, incluindo o diagrama do sistema, pode ser encontrada em nosso documento de arquitetura: [./docs/architecture.md](./docs/architecture.md). A solução utiliza uma API em Python com o framework FastAPI..."]
+A arquitetura da solução foi baseada na integração entre nossa API REST (sistema principal) e um arquivo de dados externo (boletim em PDF). A documentação detalhada da arquitetura e o diagrama de fluxo podem ser encontrados no arquivo: **[./docs/architecture.md](./docs/architecture.md)**.
 
-## 4. Instruções para Execução via Postman/Insomnia
+## 4. Instruções para Execução
 
-[Aqui você vai detalhar o passo a passo para que o professor possa testar sua API. Inclua como configurar o ambiente, como rodar o projeto e como usar a coleção do Postman/Insomnia que vocês vão fornecer.]
+Para executar e testar o projeto, siga os passos abaixo.
 
 **Pré-requisitos:**
-* Python 3.x
-* Postman ou Insomnia
+* Python 3.10 ou superior
+* Git
 
 **Passos para Execução:**
-1.  Clone o repositório: `git clone [URL_DO_SEU_REPOSITORIO]`
-2.  Navegue até a pasta do projeto: `cd [NOME_DA_PASTA]`
+1.  Clone o repositório do GitHub:
+    ```bash
+    git clone [https://github.com/Akariney/projeto-api-balneabilidade.git](https://github.com/Akariney/projeto-api-balneabilidade.git)
+    ```
+2.  Navegue até a pasta do projeto:
+    ```bash
+    cd projeto-api-balneabilidade
+    ```
 3.  Crie e ative um ambiente virtual:
     ```bash
+    # No Windows
     python -m venv venv
-    source venv/bin/activate  # No Windows: venv\Scripts\activate
+    venv\Scripts\activate
+
+    # No macOS / Linux
+    python3 -m venv venv
+    source venv/bin/activate
     ```
-4.  Instale as dependências: `pip install -r requirements.txt`
-5.  Execute a API: `uvicorn src.main:app --reload`
-6.  Importe a coleção [`postman/collection.json`](./postman/collection.json) no Postman/Insomnia e execute as requisições para os endpoints disponíveis.
+4.  Instale as dependências do projeto:
+    ```bash
+    pip install -r requirements.txt
+    ```
+5.  Execute a API com o servidor Uvicorn:
+    ```bash
+    uvicorn src.main:app --reload
+    ```
+6.  A API estará rodando em `http://127.0.0.1:8000`. Para testar os endpoints, importe a coleção [`postman/collection.json`](./postman/collection.json) no Postman ou Insomnia.
